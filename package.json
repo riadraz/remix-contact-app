@@ -2,12 +2,15 @@
   "name": "remixarisa",
   "private": true,
   "sideEffects": false,
+  "homepage": "https://riadraz.github.io/remix-contact-app",
   "scripts": {
     "build": "remix build",
     "dev": "remix dev --manual",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "remix-serve build",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@remix-run/node": "^2.4.0",
@@ -28,6 +31,7 @@
     "@typescript-eslint/parser": "^6.13.0",
     "eslint": "^8.47.0",
     "eslint-plugin-react": "^7.33.2",
+    "gh-pages": "^6.2.0",
     "typescript": "^5.1.6"
   },
   "engines": {
